@@ -1,0 +1,25 @@
+services:
+  backend:
+    build: ./backend
+    restart: always
+    ports:
+      - "8080:8080" # Optional: nur zum Debuggen freigeben
+    environment:
+      # Überschreibe hier Secrets für Produktion!
+      - JWT_SECRET=ZWluc3VwZXJzaWNoZXJlcmNvZGVmdWVybWVpbmVmYW50YXNpc2NoZWFwcGVuZGxpY
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - "80:80" # Wir mappen Port 3000 nach außen (oder 80, wenn du keinen Host-Nginx willst)
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

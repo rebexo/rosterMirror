@@ -92,7 +92,7 @@ const calendarOptions = ref({
     minute: '2-digit',
     meridiem: false,
     hour12: false
-  },
+  } as const,
   eventDisplay: 'block' // Sorgt dafür, dass Events als Blöcke mit Start/Ende angezeigt werden
 });
 

@@ -29,7 +29,7 @@ export const useTemplateStore = defineStore('template', () => {
   async function fetchTemplates() {
     isLoading.value = true;
     try {
-      const response = await axios.get('http://localhost:8080/api/templates');
+      const response = await axios.get('/api/templates');
       templates.value = response.data;
     } catch (error) {
       console.error('Fehler beim Laden der Templates:', error);
@@ -41,7 +41,7 @@ export const useTemplateStore = defineStore('template', () => {
   async function createTemplate(templateData: Template) {
     isLoading.value = true;
     try {
-      await axios.post('http://localhost:8080/api/templates', templateData);
+      await axios.post('/api/templates', templateData);
       // Nach Erfolg zur Übersichtsseite navigieren
       router.push({ name: 'template-list' });
     } catch (error) {
@@ -55,7 +55,7 @@ export const useTemplateStore = defineStore('template', () => {
   async function updateTemplate(templateData: Template) {
     isLoading.value = true;
     try {
-      const response = await axios.put(`http://localhost:8080/api/templates/${templateData.id}`, templateData);
+      const response = await axios.put(`/api/templates/${templateData.id}`, templateData);
       const index = templates.value.findIndex(t => t.id === templateData.id);
       if (index !== -1) {
         templates.value[index] = response.data;
@@ -67,7 +67,7 @@ export const useTemplateStore = defineStore('template', () => {
   async function deleteTemplate(templateId: string) {
     isLoading.value = true;
     try {
-      await axios.delete(`http://localhost:8080/api/templates/${templateId}`);
+      await axios.delete(`/api/templates/${templateId}`);
       templates.value = templates.value.filter(t => t.id !== templateId);
     } catch (error) { /* ... Error Handling ... */ }
     finally { isLoading.value = false; }

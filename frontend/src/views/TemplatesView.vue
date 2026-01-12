@@ -41,7 +41,8 @@ async function saveTemplate() {
   closeModal();
 }
 
-async function handleDelete(templateId: string) {
+async function handleDelete(templateId?: string) {
+  if (!templateId) return;
   if (confirm('Soll dieses Template wirklich gelöscht werden?')) {
     await templateStore.deleteTemplate(templateId);
   }

@@ -20,7 +20,7 @@ export const useShiftStore = defineStore('shift', () => {
   async function fetchShifts() {
     isLoading.value = true
     try {
-      const response = await axios.get('http://localhost:8080/api/shifts')
+      const response = await axios.get('/api/shifts')
       shifts.value = response.data
     } catch (error) {
       console.error('Fehler beim Laden der Schichten:', error)
@@ -33,7 +33,7 @@ export const useShiftStore = defineStore('shift', () => {
   async function createShift(newShift: Omit<Shift, 'id'>) {
     isLoading.value = true;
     try {
-      const response = await axios.post('http://localhost:8080/api/shifts', newShift);
+      const response = await axios.post('/api/shifts', newShift);
       // Füge die neue Schicht direkt zur lokalen Liste hinzu für sofortiges UI-Update
       shifts.value.push(response.data);
     } catch (error) {
@@ -46,7 +46,7 @@ export const useShiftStore = defineStore('shift', () => {
   async function updateShift(updatedShift: Shift) {
     isLoading.value = true;
     try {
-      const response = await axios.put(`http://localhost:8080/api/shifts/${updatedShift.id}`, updatedShift);
+      const response = await axios.put(`/api/shifts/${updatedShift.id}`, updatedShift);
       // Finde den Index der alten Schicht und ersetze sie
       const index = shifts.value.findIndex(s => s.id === updatedShift.id);
       if (index !== -1) {
@@ -62,7 +62,7 @@ export const useShiftStore = defineStore('shift', () => {
   async function deleteShift(shiftId: string) {
     isLoading.value = true;
     try {
-      await axios.delete(`http://localhost:8080/api/shifts/${shiftId}`);
+      await axios.delete(`/api/shifts/${shiftId}`);
       // Entferne die Schicht aus der lokalen Liste
       shifts.value = shifts.value.filter(s => s.id !== shiftId);
     } catch (error) {

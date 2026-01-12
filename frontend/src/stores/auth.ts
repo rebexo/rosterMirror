@@ -30,7 +30,7 @@ export const useAuthStore = defineStore('auth', {
 
   actions: {
     async login(credentials: LoginCredentials) {
-      const response = await axios.post('http://localhost:8080/api/auth/login', credentials)
+      const response = await axios.post('/api/auth/login', credentials)
       const token = response.data.token
       this.token = token
       localStorage.setItem('authToken', token)
@@ -46,7 +46,7 @@ export const useAuthStore = defineStore('auth', {
         throw new Error("Die Passwörter stimmen nicht überein.");
       }
 
-      const response = await axios.post('http://localhost:8080/api/auth/register', {
+      const response = await axios.post('/api/auth/register', {
         username: credentials.username,
         password: credentials.password,
         confirmPassword: credentials.confirmPassword // Backend-Validierung auch nutzen
