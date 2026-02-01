@@ -43,18 +43,23 @@ public class DataSeeder implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("--- Starting Data Seeder ---");
 
+        if (userRepository.count() > 0) {
+            System.out.println("--- Data Seeding Skipped (Database already contains data) ---");
+            return;
+        }
+
         // 1. Bestehende Daten löschen, um einen sauberen Start zu garantieren
-        availabilityDetailRepository.deleteAll();
-        availabilityEntryRepository.deleteAll();
-        schemaTemplateAssignmentRepository.deleteAll();
-        scheduleSchemaRepository.deleteAll();
-        templateShiftRepository.deleteAll(); // Shifts innerhalb von Templates löschen
-        weeklyTemplateRepository.deleteAll();
-        shiftRepository.deleteAll();
-        userRepository.deleteAll();
-        weeklyTemplateRepository.deleteAll();
-        shiftRepository.deleteAll();
-        userRepository.deleteAll();
+//        availabilityDetailRepository.deleteAll();
+//        availabilityEntryRepository.deleteAll();
+//        schemaTemplateAssignmentRepository.deleteAll();
+//        scheduleSchemaRepository.deleteAll();
+//        templateShiftRepository.deleteAll(); // Shifts innerhalb von Templates löschen
+//        weeklyTemplateRepository.deleteAll();
+//        shiftRepository.deleteAll();
+//        userRepository.deleteAll();
+//        weeklyTemplateRepository.deleteAll();
+//        shiftRepository.deleteAll();
+//        userRepository.deleteAll();
 
         // 2. Test-User anlegen
         User devUser = new User();
