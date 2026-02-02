@@ -3,7 +3,7 @@ package org.roster.backend.application.service;
 import lombok.RequiredArgsConstructor;
 import org.roster.backend.application.port.in.iShiftService;
 import org.roster.backend.application.port.out.ShiftPort;
-import org.roster.backend.adapter.in.web.dto.ShiftDto;
+import org.roster.backend.application.dto.ShiftDto;
 import org.roster.backend.domain.Shift;
 import org.roster.backend.domain.User;
 import org.springframework.security.core.context.SecurityContextHolder;

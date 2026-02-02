@@ -1,8 +1,8 @@
 package org.roster.backend.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
-import org.roster.backend.adapter.in.web.dto.SchemaDto;
-import org.roster.backend.adapter.in.web.dto.CalculatedShiftDto;
+import org.roster.backend.application.dto.SchemaDto;
+import org.roster.backend.application.dto.CalculatedShiftDto;
 import org.roster.backend.application.port.in.iSchemaService;
 import org.roster.backend.application.port.in.iSolverService;
 import org.roster.backend.domain.ScheduleProposal;

@@ -1,8 +1,8 @@
 package org.roster.backend.adapter.in.web;
 
-import org.roster.backend.adapter.in.web.dto.AuthToken;
-import org.roster.backend.adapter.in.web.dto.LoginRequest;
-import org.roster.backend.adapter.in.web.dto.RegisterRequest;
+import org.roster.backend.application.dto.AuthToken;
+import org.roster.backend.application.dto.LoginRequest;
+import org.roster.backend.application.dto.RegisterRequest;
 import org.roster.backend.application.port.in.iAuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package org.roster.backend.application.port.in;
 
-import org.roster.backend.adapter.in.web.dto.CalculatedShiftDto;
-import org.roster.backend.adapter.in.web.dto.SchemaDto;
+import org.roster.backend.application.dto.CalculatedShiftDto;
+import org.roster.backend.application.dto.SchemaDto;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

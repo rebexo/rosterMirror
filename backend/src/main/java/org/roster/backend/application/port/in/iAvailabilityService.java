@@ -1,8 +1,8 @@
 package org.roster.backend.application.port.in;
 
-import org.roster.backend.adapter.in.web.dto.AvailabilityEntryDetailDto;
-import org.roster.backend.adapter.in.web.dto.NewAvailabilityEntryDto;
-import org.roster.backend.adapter.in.web.dto.PublicSchemaDto;
+import org.roster.backend.application.dto.AvailabilityEntryDetailDto;
+import org.roster.backend.application.dto.NewAvailabilityEntryDto;
+import org.roster.backend.application.dto.PublicSchemaDto;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

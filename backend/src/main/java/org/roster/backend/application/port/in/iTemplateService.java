@@ -1,6 +1,6 @@
 package org.roster.backend.application.port.in;
 
-import org.roster.backend.adapter.in.web.dto.TemplateDto;
+import org.roster.backend.application.dto.TemplateDto;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

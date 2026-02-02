@@ -1,7 +1,7 @@
 package org.roster.backend.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
-import org.roster.backend.adapter.in.web.dto.ShiftDto;
+import org.roster.backend.application.dto.ShiftDto;
 import org.roster.backend.application.port.in.iShiftService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

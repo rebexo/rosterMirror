@@ -1,7 +1,7 @@
 package org.roster.backend.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
-import org.roster.backend.adapter.in.web.dto.AvailabilityEntryDetailDto;
+import org.roster.backend.application.dto.AvailabilityEntryDetailDto;
 import org.roster.backend.application.port.in.iAvailabilityService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

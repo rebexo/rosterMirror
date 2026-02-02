@@ -7,7 +7,7 @@ const authStore = useAuthStore();
 <template>
   <div>
     <h1>Dashboard</h1>
-    <h2>Willkommen zurück, {{ authStore.user?.username }}!</h2>
+    <h2>Willkommen {{ authStore.user?.username }}!</h2>
     <p>Wähle einen Punkt aus der Menüleiste oben, um zu beginnen.</p>
   </div>
 </template>

@@ -1,4 +1,4 @@
-package org.roster.backend.adapter.in.web.dto;
+package org.roster.backend.application.dto;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package org.roster.backend.application.port.in;
 
-import org.roster.backend.adapter.in.web.dto.ProposalDetailDto;
+import org.roster.backend.application.dto.ProposalDetailDto;
 
 import java.util.Optional;
 import java.util.UUID;

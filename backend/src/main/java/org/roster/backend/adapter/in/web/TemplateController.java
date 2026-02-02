@@ -1,7 +1,7 @@
 package org.roster.backend.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
-import org.roster.backend.adapter.in.web.dto.TemplateDto;
+import org.roster.backend.application.dto.TemplateDto;
 import org.roster.backend.application.port.in.iTemplateService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

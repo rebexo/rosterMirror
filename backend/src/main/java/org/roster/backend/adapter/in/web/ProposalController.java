@@ -1,7 +1,7 @@
 package org.roster.backend.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
-import org.roster.backend.adapter.in.web.dto.ProposalDetailDto;
+import org.roster.backend.application.dto.ProposalDetailDto;
 import org.roster.backend.application.port.in.iProposalService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

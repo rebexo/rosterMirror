@@ -32,7 +32,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             @NonNull FilterChain filterChain
     ) throws ServletException, IOException {
 
-        // 🔹 Skip JWT auth for public endpoints
+        // skip JWT auth for public endpoints
 //        String path = request.getServletPath();
 //        if (path.startsWith("/api/auth/") || path.startsWith("/h2-console/")) {
 //            filterChain.doFilter(request, response);

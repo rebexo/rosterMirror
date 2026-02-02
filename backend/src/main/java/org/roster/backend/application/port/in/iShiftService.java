@@ -1,6 +1,6 @@
 package org.roster.backend.application.port.in;
 
-import org.roster.backend.adapter.in.web.dto.ShiftDto;
+import org.roster.backend.application.dto.ShiftDto;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
